@@ -2,6 +2,7 @@ import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
 import io.vertx.core.Vertx;
 import verticles.BasicVerticle;
+import verticles.ServerBasedVerticle;
 import verticles.SimpleVerticle;
 
 public class Main {
@@ -32,5 +33,6 @@ public class Main {
             });
         */
 
+        vertx.deployVerticle(new ServerBasedVerticle());
     }
 }
